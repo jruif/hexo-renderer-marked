@@ -9,8 +9,8 @@ var marked = require('marked'),
 
 var anchorId = function(str){
   return str
-    .replace(/\s+/g, '_')
-    .replace(/\./g, '-')
+    .toLowerCase()
+    .replace(/[\.\s]+/g, '-')
     .replace(/-{2,}/g, '-');
 };
 
